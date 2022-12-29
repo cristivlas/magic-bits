@@ -331,7 +331,7 @@ private:
 
       // Trial and error approach to generate magics.
       while (true) {
-        std::vector<uint64_t> table(1U << shift_bits, kInvalidAttack);
+        std::vector<uint64_t> table(1ULL << shift_bits, kInvalidAttack);
         uint64_t candidate_magic = rand_gen();
         bool collision = false;
         for (size_t k = 0; k < occupancies.size(); ++k) {
